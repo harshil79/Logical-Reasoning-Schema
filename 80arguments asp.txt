@@ -1,0 +1,1108 @@
+pos(cats, self_reliant).
+pos(cats, independent).
+pos(cats, clean).
+pos(cats, can_use_toilet).
+pos(cats, less_needy).
+pos(cats, less_emotionally_dependent).
+pos(cats, less_time_consuming).
+pos(cats, can_be_trained).
+pos(cats, make_good_bodyguards).
+neg(dogs, self_reliant).
+neg(dogs, independent).
+neg(dogs, clean).
+neg(dogs, can_use_toilet).
+neg(dogs, less_needy).
+neg(dogs, less_emotionally_dependent).
+neg(dogs, less_time_consuming).
+neg(dogs, can_be_trained).
+neg(dogs, make_good_bodyguards).
+relation(cats, dogs).
+compare(cats, X, Y) :- neg(cats, X), neg(Y, X), cats != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cats.
+compare(dogs, X, Y) :- neg(dogs, X), neg(Y, X), dogs != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dogs.
+pos(dog, better_than_cat).
+neg(cat, better_than_dog).
+relation(dog, mans_best_friend).
+relation(dog, useful).
+relation(dog, loyal).
+relation(dog, hunter).
+relation(dog, drug_sniffer).
+relation(dog, life_saver).
+relation(dog, book_character).
+relation(dog, trainable).
+dog_is_good_because :- pos(dog,Y).
+compare(dog,X,Y) :- neg(dog,X),neg(Y,X), dog != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dog.
+pos(cats, is_cute).
+pos(cats, is_lazy).
+pos(cats, is_popular).
+neg(cats, is_intelligent).
+neg(cats, is_tough).
+neg(cats, is_able_to_listen).
+relation(cats, dogs).
+compare(cats, X, Y) :- neg(cats, X), neg(Y, X), cats != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cats.
+pos(dog, man's_best_friend).
+pos(dog, trainable).
+pos(dog, home_protector).
+pos(dog, listener).
+pos(dog, exercise_partner).
+pos(dog, follower).
+neg(cat, man's_best_friend).
+neg(cat, trainable).
+neg(cat, home_protector).
+neg(cat, listener).
+neg(cat, exercise_partner).
+neg(cat, follower).
+relation(dog, cat).
+dog_is_good_because :- pos(dog,Y).
+cat_is_good_because :- pos(cat,Y).
+compare(dog,X,Y) :- neg(dog,X),neg(Y,X), dog != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dog.
+compare(cat,X,Y) :- neg(cat,X),neg(Y,X), cat != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = cat.
+pos(cat, is_best_pet).
+neg(dog, is_best_pet).
+relation(cat, remove_and_eat_pests).
+relation(cat, funny_but_mysterious).
+relation(cat, keep_themselves_clean).
+relation(cat, potty_trained).
+relation(cat, does_not_chew_on_anything).
+relation(cat, was_once_worshipped_as_gods).
+cat_is_good_because :- pos(cat, Y).
+compare(cat, X, Y) :- neg(cat, X), neg(Y, X), cat != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cat.
+pos(dog, loyal).
+pos(dog, friendly).
+pos(dog, social).
+neg(cat, loyal).
+neg(cat, friendly).
+neg(cat, social).
+relation(dog, pet).
+relation(cat, pet).
+dog_is_good_because :- pos(dog,Y).
+compare(dog,X,Y) :- neg(dog,X),neg(Y,X), dog != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dog.
+pos(dog, loyal).
+pos(dog, helpful).
+pos(dog, can_hunt_down_prisoners).
+pos(dog, can_tackle_to_the_ground).
+pos(dog, has_keen_abilities).
+pos(dog, can_be_trained).
+pos(dog, is_hungry).
+pos(dog, always_wants_attention).
+pos(dog, can_hurt_you).
+pos(cat, loyal).
+pos(cat, helpful).
+pos(cat, can_get_rid_of_mice).
+pos(cat, can_be_trained).
+pos(cat, is_quiet).
+pos(cat, is_patient).
+pos(cat, never_begs).
+pos(cat, is_mean).
+pos(cat, is_rabid).
+pos(cat, can_hurt_someone).
+relation(dog, cat).
+dog_is_good_because :- pos(dog, Y).
+cat_is_good_because :- pos(cat, Y).
+compare(dog, X, Y) :- neg(dog, X), neg(Y, X), dog != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dog.
+compare(cat, X, Y) :- neg(cat, X), neg(Y, X), cat != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cat.
+pos(dog, loyal).
+pos(dog, good_with_training).
+pos(dog, used_for_variety_of_things).
+neg(cat, loyal).
+neg(cat, good_with_training).
+neg(cat, used_for_variety_of_things).
+relation(dog, better_than_cat).
+dog_is_good_because :- pos(dog,Y).
+compare(dog,X,Y) :- neg(dog,X),neg(Y,X), dog != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dog.
+pos(dog, good_friend).
+neg(dog, not_good_friend).
+relation(dog, breed).
+relation(dog, characteristic).
+relation(dog, cat).
+compare(dog, X, Y) :- neg(dog, X), neg(Y, X), dog != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dog.
+pos(dogs, cute).
+pos(dogs, independent).
+pos(cats, independent).
+neg(dogs, high_maintenance).
+neg(cats, high_maintenance).
+neg(dogs, destroy_house).
+neg(cats, destroy_house).
+neg(dogs, need_to_be_walked).
+neg(cats, need_to_be_walked).
+neg(dogs, do_business_in_house).
+neg(cats, do_business_in_house).
+relation(dogs, cats).
+relation(dogs, house).
+relation(dogs, owner).
+relation(cats, house).
+relation(cats, owner).
+compare(dogs, X, Y) :- neg(dogs, X), neg(Y, X), dogs != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dogs.
+compare(cats, X, Y) :- neg(cats, X), neg(Y, X), cats != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cats.
+pos(dogs, loyal).
+pos(dogs, friendly).
+pos(dogs, protective).
+pos(dogs, good_companions).
+pos(cats, affectionate).
+pos(cats, playful).
+pos(cats, independent).
+pos(cats, good_companions).
+relation(dogs, cats).
+compare(dogs, X, Y) :- neg(dogs, X), neg(Y, X), dogs != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dogs.
+compare(cats, X, Y) :- neg(cats, X), neg(Y, X), cats != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cats.
+pos(dog, is_better_pet).
+neg(cat, is_better_pet).
+relation(dog, happy_to_see_you).
+relation(dog, can_play_sports).
+relation(dog, can_understand_human_behavior).
+relation(dog, can_defend_human).
+relation(dog, is_brave).
+relation(dog, is_beautiful).
+relation(dog, knows_position_in_family).
+neg(cat, happy_to_see_you).
+neg(cat, can_play_sports).
+neg(cat, can_understand_human_behavior).
+neg(cat, can_defend_human).
+neg(cat, is_brave).
+neg(cat, is_beautiful).
+neg(cat, knows_position_in_family).
+relation(dog, cat).
+dog_is_good_because :- pos(dog, Y).
+compare(dog, X, Y) :- neg(dog, X), neg(Y, X), dog != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dog.
+pos(dog, is_better_pet).
+neg(cat, is_better_pet).
+relation(dog, play).
+relation(dog, protect).
+relation(dog, guide).
+relation(dog, detect).
+relation(dog, save).
+relation(dog, loyal).
+dog_is_good_because :- pos(dog,Y).
+compare(dog,X,Y) :- neg(dog,X),neg(Y,X), dog != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dog.
+pos(dog, play).
+pos(dog, active).
+pos(cat, play).
+pos(cat, relax).
+neg(dog, annoying).
+pos(cat, train).
+neg(dog, expensive).
+neg(cat, smell).
+neg(dog, hard_work).
+relation(dog, cat).
+dog_is_good_because :- pos(dog,Y).
+cat_is_good_because :- pos(cat,Y).
+compare(dog,X,Y) :- neg(dog,X),neg(Y,X), dog != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dog.
+compare(cat,X,Y) :- neg(cat,X),neg(Y,X), cat != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = cat.
+pos(cats, clean).
+pos(cats, snuggle).
+pos(cats, cheap).
+pos(cats, whiskers).
+neg(dogs, clean).
+neg(dogs, snuggle).
+neg(dogs, cheap).
+neg(dogs, whiskers).
+relation(cats, dogs).
+compare(cats,X,Y) :- neg(cats,X),neg(Y,X), cats != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = cats.
+pos(dog, is_better_than_cat).
+neg(cat, is_better_than_dog).
+relation(dog, help_blind).
+relation(dog, help_police).
+relation(dog, be_friend).
+relation(dog, have_sensitive_nose).
+relation(dog, be_cute).
+relation(dog, be_loyal).
+relation(dog, understand_feelings).
+relation(dog, sacrifice_life).
+relation(dog, be_man's_best_friend).
+relation(dog, touch_people).
+relation(dog, help_people).
+dog_is_good_because :- pos(dog,Y).
+compare(dog,X,Y) :- neg(dog,X),neg(Y,X), dog != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dog.
+pos(dog, fun_and_energetic).
+pos(cat, good_at_fighting).
+pos(cat, good_at_defending).
+pos(cat, does_not_need_to_go_outside).
+pos(cat, good_at_hunting).
+neg(dog, needs_to_go_outside).
+neg(dog, not_as_good_at_hunting).
+relation(dog, cat).
+compare(dog, X, Y) :- neg(dog, X), neg(Y, X), dog != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dog.
+pos(dogs, fun).
+pos(dogs, energetic).
+pos(dogs, useful).
+neg(cats, fun).
+neg(cats, energetic).
+neg(cats, useful).
+relation(dogs, cats).
+compare(dogs,X,Y) :- neg(dogs,X),neg(Y,X), dogs != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dogs.
+pos(dogs, better_than_cats).
+neg(dogs, bad_for_allergies).
+neg(dogs, bad_for_apartments).
+pos(cats, good_for_allergies).
+pos(cats, good_for_apartments).
+relation(dogs, cats).
+compare(dogs, X, Y) :- neg(dogs, X), neg(Y, X), dogs != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dogs.
+compare(cats, X, Y) :- neg(cats, X), neg(Y, X), cats != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cats.
+pos(cats, intelligent).
+pos(cats, independent).
+pos(cats, clean).
+neg(cats, loyal).
+neg(cats, obedient).
+neg(cats, needy).
+relation(cats, dogs).
+compare(cats, X, Y) :- neg(cats, X), neg(Y, X), cats != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cats.
+pos(elon_musk, entrepreneur).
+pos(elon_musk, revolutionary).
+pos(elon_musk, innovator).
+pos(elon_musk, human_being).
+neg(steve_jobs, entrepreneur).
+neg(steve_jobs, revolutionary).
+neg(steve_jobs, innovator).
+neg(steve_jobs, human_being).
+relation(elon_musk, steve_jobs).
+elon_musk_is_good_because :- pos(elon_musk, Y).
+compare(elon_musk, X, Y) :- neg(elon_musk, X), neg(Y, X), elon_musk != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = elon_musk.
+pos(elon_musk, visionary_ideas).
+pos(elon_musk, good_intentions).
+pos(elon_musk, successful_entrepreneur).
+pos(tesla, electric_cars).
+pos(tesla, solar_panels).
+pos(spacex, reusable_rockets).
+pos(spacex, starlink).
+relation(elon_musk, tesla).
+relation(elon_musk, spacex).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+pos(elon_musk, visionary_ideas).
+neg(tesla, good_working_conditions).
+relation(elon_musk, trump_advisory_council).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+elon_is_good_because :- pos(elon,Y).
+pos(elon_musk, visionary_ideas).
+pos(elon_musk, successful_tech_startups).
+pos(elon_musk, solarcity).
+pos(elon_musk, tesla).
+pos(elon_musk, spacex).
+pos(elon_musk, re_landed_rocket).
+pos(elon_musk, efficient).
+pos(elon_musk, private_industry).
+pos(elon_musk, surpass_government).
+pos(elon_musk, science).
+pos(elon_musk, technology).
+pos(elon_musk, agriculture).
+pos(elon_musk, direction).
+pos(elon_musk, view).
+pos(elon_musk, make_world_better).
+pos(elon_musk, turn_profit).
+pos(elon_musk, win_win).
+neg(government, efficient).
+neg(government, surpass_private_industry).
+neg(government, science).
+neg(government, technology).
+neg(government, agriculture).
+relation(elon_musk, solarcity).
+relation(elon_musk, tesla).
+relation(elon_musk, spacex).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+pos(modern_society, collapse).
+pos(humans, extinct).
+pos(tesla, wet_dream).
+pos(elon_musk, worshipped).
+pos(billions_of_people, want_to_live_like_americans).
+pos(electronics, buy).
+pos(cars, buy).
+pos(countless_everyday_items, buy).
+pos(industrial_farms, use).
+pos(factories, use).
+pos(military_equipment, use).
+pos(transportation, use).
+pos(homes, use).
+pos(oil, made_from).
+pos(oil, built_from).
+pos(no_replacement_for_oil_or_diesel_cars, feasible_return_amount_of_energy).
+pos(all_the_paints, oil_based).
+pos(all_the_manufacturing, oil_based).
+pos(all_the_tires, oil_based).
+pos(all_the_transportation, oil_based).
+pos(electric_batteries, made_from).
+pos(precious_metals, made_from).
+pos(precious_metals, america's_enemies_have).
+pos(precious_metals, underdeveloped_countries).
+pos(charging_systems, depleting_returns).
+pos(charging_systems, copper_based).
+pos(charging_systems, trillions_to_run).
+pos(farms, fertilized).
+pos(farms, insecticide).
+pos(farms, transported).
+pos(farms, refrigerated).
+pos(farms, oil).
+pos(farms, dust_bowls).
+pos(farms, co2).
+pos(farms, feces).
+pos(environment, contaminated).
+pos(basic_electricity, alternative).
+pos(basic_electricity, wind).
+pos(basic_electricity, solar).
+pos(plastics, petroleum).
+pos(certain_conditions, use).
+pos(certain_conditions, transport).
+pos(transport, diminished_return).
+pos(ancestors, eighteenth_century).
+pos(climate_change).
+pos(could_have_stopped_it).
+pos(could_have_stopped_it, twenty_years_ago).
+pos(could_have_stopped_it, ten_years_ago).
+pos(optimum_performance).
+pos(optimum_performance, save_us).
+pos(current_leased_oil, release_2000_gigatons_of_co2).
+pos(post_apocalyptic_mad_max_society).
+pos(mass_migration).
+pos(plague).
+pos(famine).
+pos(sea_levels, destroy).
+pos(population_centers, hundred_miles_of_the_ocean).
+pos(storms, tear_down_whole_cities).
+pos(extinction_of_most_animals).
+pos(last_time_there_was_this_amount_of_co2_in_the_air).
+pos(humans, didn't_exist).
+pos(trees, size_of_red_woods).
+pos(oceans, eighthundred_feet_higher).
+pos(no_hope).
+relation(modern_society, collapse).
+relation(humans, extinct).
+relation(tesla, wet_dream).
+relation(elon_musk, worshipped).
+relation(billions_of_people, want_to_live_like_americans).
+relation(electronics, buy).
+relation(cars, buy).
+relation(countless_everyday_items, buy).
+relation(industrial_farms, use).
+relation(factories, use).
+relation(military_equipment, use).
+relation(transportation, use).
+relation(homes, use).
+relation(oil, made_from).
+relation(oil, built_from).
+relation(no_replacement_for_oil_or_diesel_cars, feasible_return_amount_of_energy).
+relation(all_the_paints, oil_based).
+relation(all_the_manufacturing, oil_based).
+relation(all_the_tires, oil_based).
+relation(all_the_transportation, oil_based).
+relation(electric_batteries, made_from).
+relation(precious_metals, made_from).
+relation(precious_metals, america's_enemies_have).
+relation(precious_metals, underdeveloped_countries).
+relation(charging_systems, depleting_returns).
+pos(success, hard_work).
+pos(success, intelligence).
+pos(success, luck).
+pos(success, genes).
+pos(success, upbringing).
+pos(success, environment).
+pos(success, system).
+pos(success, snowball_effect).
+pos(success, media_illusion).
+pos(success, hero_worship).
+pos(success, halo_effect).
+pos(success, analysis).
+neg(success, poor_people).
+neg(success, society_help).
+relation(success, hard_work).
+relation(success, intelligence).
+relation(success, luck).
+relation(success, genes).
+relation(success, upbringing).
+relation(success, environment).
+relation(success, system).
+relation(success, snowball_effect).
+relation(success, media_illusion).
+relation(success, hero_worship).
+relation(success, halo_effect).
+relation(success, analysis).
+success_is_good_because :- pos(success, Y).
+compare(success, X, Y) :- neg(success, X), neg(Y, X), success != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = success.
+pos(elon_musk, visionary_ideas).
+pos(elon_musk, space_exploration).
+pos(elon_musk, transportation_infrastructure).
+pos(elon_musk, helping_kids).
+neg(person_who_sits_around_doing_nothing, value_to_the_world).
+relation(elon_musk, person_who_sits_around_doing_nothing).
+relation(elon_musk, teacher).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+pos(splurge, ordinary_people).
+pos(splurge, wealthy_people).
+neg(splurge, simple_life).
+relation(splurge, ordinary_people).
+relation(splurge, wealthy_people).
+relation(splurge, simple_life).
+splurge_is_good_because :- pos(splurge, Y).
+compare(splurge, X, Y) :- neg(splurge, X), neg(Y, X), splurge != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = splurge.
+relation(X, Y) :- relation(Y, X).
+neg(X, Z) :- relation(X, Y), neg(Y, Z).
+neg(X, Z) :- neg(Y, Z), neg(X, Y).
+pos(X, Z) :- relation(X, Y), pos(Y, Z).
+pos(X, Z) :- pos(Y, Z), pos(X, Y).
+pos(elon_musk, visionary_ideas).
+neg(elon_musk, good_working_conditions).
+neg(elon_musk, taxpayer_money).
+neg(elon_musk, public_good).
+relation(elon_musk, spacex).
+relation(elon_musk, tesla).
+relation(elon_musk, twitter).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+pos(tesla, home_battery).
+pos(tesla, sustainable_energy).
+pos(tesla, revolution).
+pos(tesla, market).
+pos(tesla, energy_distribution).
+pos(tesla, powerwall).
+neg(tesla, expensive).
+neg(tesla, not_revolutionary).
+relation(tesla, powerwall).
+relation(tesla, sustainable_energy).
+relation(tesla, revolution).
+relation(tesla, market).
+relation(tesla, energy_distribution).
+tesla_is_good_because :- pos(tesla,Y).
+compare(tesla,X,Y) :- neg(tesla,X),neg(Y,X), tesla != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = tesla.
+pos(colonization, ruin).
+pos(colonization, change_for_the_worse).
+pos(mars, planet).
+pos(earth, planet).
+pos(natural_beauty, good).
+pos(extinction, bad).
+pos(exploitation, bad).
+pos(mountaintop_removal, bad).
+pos(terraforming, bad).
+pos(scientific_expedition, good).
+pos(small_scientific_research_station, good).
+pos(natural_park, good).
+pos(sustainability, good).
+relation(colonization, mars).
+relation(colonization, earth).
+relation(natural_beauty, mars).
+relation(natural_beauty, earth).
+relation(extinction, native_species).
+relation(exploitation, resources).
+relation(mountaintop_removal, coal).
+relation(terraforming, mars).
+relation(scientific_expedition, planet).
+relation(small_scientific_research_station, planet).
+relation(natural_park, planet).
+relation(sustainability, planet).
+colonization_is_good_because :- pos(scientific_expedition, good).
+colonization_is_good_because :- pos(small_scientific_research_station, good).
+colonization_is_good_because :- pos(natural_park, good).
+colonization_is_good_because :- pos(sustainability, good).
+compare(colonization, X, Y) :- neg(colonization, X), neg(Y, X), colonization != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = colonization.
+neg(elon_musk, visionary_ideas).
+neg(elon_musk, good_working_conditions).
+neg(elon_musk, twitter).
+neg(elon_musk, neuralink).
+neg(elon_musk, tesla).
+relation(elon_musk, man_child).
+relation(elon_musk, conman).
+relation(elon_musk, arrogant).
+relation(elon_musk, pseudointellectual).
+relation(elon_musk, developmentally_stunted).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+pos(elon_musk, power).
+neg(elon_musk, money).
+relation(elon_musk, twitter).
+compare(elon_musk, X, Y) :- neg(elon_musk, X), neg(Y, X), elon_musk != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = elon_musk.
+pos(conservatives, support_free_speech).
+neg(liberals, support_free_speech).
+relation(conservatives, ban_books).
+relation(conservatives, cancel_culture).
+relation(conservatives, college_administrations).
+relation(conservatives, athletes_kneeling).
+relation(conservatives, elon_musk).
+relation(conservatives, don't_say_gay).
+relation(conservatives, stop_woke).
+relation(conservatives, anti_bds).
+relation(conservatives, trump_supporters).
+relation(liberals, cancel_culture).
+relation(liberals, college_administrations).
+compare(conservatives, liberals, support_free_speech) :- pos(conservatives, support_free_speech), neg(liberals, support_free_speech).
+compare(conservatives, liberals, ban_books) :- pos(conservatives, ban_books), neg(liberals, ban_books).
+compare(conservatives, liberals, cancel_culture) :- pos(conservatives, cancel_culture), neg(liberals, cancel_culture).
+compare(conservatives, liberals, college_administrations) :- pos(conservatives, college_administrations), neg(liberals, college_administrations).
+compare(conservatives, liberals, athletes_kneeling) :- pos(conservatives, athletes_kneeling), neg(liberals, athletes_kneeling).
+compare(conservatives, liberals, elon_musk) :- pos(conservatives, elon_musk), neg(liberals, elon_musk).
+compare(conservatives, liberals, don't_say_gay) :- pos(conservatives, don't_say_gay), neg(liberals, don't_say_gay).
+compare(conservatives, liberals, stop_woke) :- pos(conservatives, stop_woke), neg(liberals, stop_woke).
+compare(conservatives, liberals, anti_bds) :- pos(conservatives, anti_bds), neg(liberals, anti_bds).
+compare(conservatives, liberals, trump_supporters) :- pos(conservatives, trump_supporters), neg(liberals, trump_supporters).
+pos(elon_musk, visionary_ideas).
+neg(tesla, good_working_conditions).
+relation(elon_musk, twitter).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+relation(mr_beast, elon_musk).
+mr_beast_is_good_because :- pos(mr_beast,Y).
+compare(mr_beast,X,Y) :- neg(mr_beast,X),neg(Y,X), mr_beast != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = mr_beast.
+relation(people, suffering).
+compare(people,X,suffering) :- neg(people,X),neg(suffering,X), people != suffering.
+compare(X,Y,suffering) :- neg(X,Y),neg(X,suffering), Y != suffering, Y = people.
+relation(money, people).
+compare(money,X,people) :- neg(money,X),neg(people,X), money != people.
+compare(X,Y,people) :- neg(X,Y),neg(X,people), Y != people, Y = money.
+relation(rich_people, money).
+compare(rich_people,X,money) :- neg(rich_people,X),neg(money,X), rich_people != money.
+compare(X,Y,money) :- neg(X,Y),neg(X,money), Y != money, Y = rich_people.
+relation(rich_people, people).
+compare(rich_people,X,people) :- neg(rich_people,X),neg(people,X), rich_people != people.
+compare(X,Y,people) :- neg(X,Y),neg(X,people), Y != people, Y = rich_people.
+relation(rich_people, saving_the_world).
+compare(rich_people,X,saving_the_world) :- neg(rich_people,X),neg(saving_the_world,X), rich_people != saving_the_world.
+compare(X,Y,saving_the_world) :- neg(X,Y),neg(X,saving_the_world), Y != saving_the_world, Y = rich_people.
+relation(saving_the_world, people).
+pos(twitter, powerful).
+pos(twitter, effective).
+pos(twitter, news).
+pos(twitter, real_time).
+pos(twitter, individuals).
+pos(twitter, share).
+pos(twitter, stories).
+pos(twitter, embarrassing).
+pos(twitter, inhumane).
+pos(twitter, authoritarian).
+pos(twitter, billionaire).
+pos(twitter, authoritarian, country).
+pos(twitter, citizens).
+pos(twitter, embarrassing).
+pos(twitter, inhumane).
+pos(twitter, twitter, problem).
+pos(twitter, problem, go_away).
+pos(twitter, twitter, ban).
+pos(twitter, twitter, look, bad).
+pos(twitter, twitter, authoritarian).
+pos(twitter, twitter, other_countries).
+pos(twitter, twitter, react).
+pos(twitter, twitter, silence).
+pos(twitter, twitter, ceo).
+pos(twitter, twitter, buy).
+pos(twitter, twitter, break).
+pos(twitter, twitter, hurt).
+pos(twitter, twitter, ceo, cosplaying).
+pos(twitter, twitter, smash).
+pos(twitter, twitter, pieces).
+pos(twitter, twitter, business_owner).
+pos(twitter, twitter, horrified).
+pos(twitter, twitter, lose).
+pos(twitter, twitter, money).
+pos(twitter, twitter, elon).
+pos(twitter, twitter, surprisingly).
+pos(twitter, twitter).
+pos(twitter, twitter, care).
+pos(twitter, twitter, given).
+pos(twitter, twitter, money).
+pos(twitter, twitter, upfront).
+pos(twitter, twitter, country_leaders).
+pos(twitter, twitter, corporations).
+pos(twitter, twitter, intent).
+pos(twitter, twitter, destroy).
+pos(twitter, twitter, random).
+pos(twitter, twitter, flailing).
+pos(twitter, twitter, platform).
+pos(twitter, twitter, demolition).
+pos(twitter, twitter, smile).
+relation(elon_musk, twitter).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+pos(elon_musk, visionary_ideas).
+neg(tesla, good_working_conditions).
+relation(elon_musk, twitter).
+relation(elon_musk, tesla_ai_bot).
+relation(tesla_ai_bot, twitter_conversations).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+pos(bill_gates, microsoft).
+pos(bill_gates, founder).
+pos(bill_gates, mother).
+pos(bill_gates, connections).
+pos(bill_gates, ibm).
+pos(bill_gates, partnership).
+pos(bill_gates, idea).
+pos(bill_gates, webstore).
+pos(bill_gates, replicate).
+pos(jeff_bezos, amazon).
+pos(jeff_bezos, friends).
+pos(jeff_bezos, family).
+pos(jeff_bezos, threehundredk).
+pos(jeff_bezos, idea).
+pos(jeff_bezos, webstore).
+pos(jeff_bezos, replicate).
+pos(elon_musk, tesla).
+pos(elon_musk, founder).
+pos(elon_musk, government).
+pos(elon_musk, contracts).
+pos(elon_musk, subsidies).
+pos(elon_musk, lemonade_stand).
+pos(elon_musk, soft_drink_corporation).
+pos(elon_musk, not_founder).
+pos(elon_musk, electric_vehicles).
+pos(elon_musk, accessible).
+pos(elon_musk, popular).
+pos(elon_musk, secret_plan).
+pos(elon_musk, fourhundred_m_race).
+pos(elon_musk, cheater).
+pos(elon_musk, rest_of_the_runners).
+pos(elon_musk, bother).
+pos(mark_cuban, self_made).
+pos(steve_jobs, self_made).
+pos(evan_spiegel, self_made).
+pos(dhirubhai_ambani, self_made).
+pos(gautam_adani, self_made).
+pos(oprah, self_made).
+pos(rihanna, self_made).
+relation(bill_gates, microsoft).
+relation(jeff_bezos, amazon).
+relation(elon_musk, tesla).
+relation(mark_cuban, self_made).
+relation(steve_jobs, self_made).
+relation(evan_spiegel, self_made).
+relation(dhirubhai_ambani, self_made).
+relation(gautam_adani, self_made).
+relation(oprah, self_made).
+relation(rihanna, self_made).
+bill_gates_is_good_because :- pos(bill_gates,Y).
+jeff_bezos_is_good_because :- pos(jeff_bezos,Y).
+elon_musk_is_good_because :- pos(elon_musk,Y).
+mark_cuban_is_good_because :- pos(mark_cuban,Y).
+steve_jobs_is_good_because :- pos(steve_jobs,Y).
+evan_spiegel_is_good_because :- pos(evan_spiegel,Y).
+dhirubhai_ambani_is_good_because :- pos(dhirubhai_ambani,Y).
+gautam_adani_is_good_because :- pos(gautam_adani,Y).
+oprah_is_good_because :- pos(oprah,Y).
+rihanna_is_good_because :- pos(rihanna,Y).
+pos(elon_musk, visionary_ideas).
+neg(tesla, good_working_conditions).
+relation(elon_musk, twitter).
+elon_is_good_because :- pos(elon,Y).
+compare(elon,X,Y) :- neg(elon,X),neg(Y,X), elon != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = elon.
+elon_is_good_because(elon_musk, visionary_ideas).
+twitter_is_good_because(twitter, free_speech).
+elon_is_good_because(elon_musk, twitter).
+twitter_is_good_because(twitter, elon_musk).
+compare(elon_musk, twitter, free_speech) :- pos(elon_musk, visionary_ideas), pos(twitter, free_speech).
+compare(elon_musk, twitter, censorship) :- neg(elon_musk, visionary_ideas), pos(twitter, censorship).
+compare(elon_musk, twitter, elon_musk) :- pos(elon_musk, visionary_ideas), pos(twitter, elon_musk).
+compare(elon_musk, twitter, bad_working_conditions) :- neg(elon_musk, visionary_ideas), neg(twitter, bad_working_conditions).
+compare(twitter, elon_musk, free_speech) :- pos(twitter, free_speech), pos(elon_musk, visionary_ideas).
+compare(twitter, elon_musk, censorship) :- pos(twitter, censorship), neg(elon_musk, visionary_ideas).
+compare(twitter, elon_musk, elon_musk) :- pos(twitter, elon_musk), pos(elon_musk, visionary_ideas).
+compare(twitter, elon_musk, bad_working_conditions) :- pos(twitter, bad_working_conditions), neg(elon_musk, visionary_ideas).
+pos(fossil_fuels, abundant).
+pos(fossil_fuels, inexpensive).
+pos(fossil_fuels, reliable).
+neg(renewable_resources, inexpensive).
+neg(renewable_resources, reliable).
+neg(renewable_resources, environmentally_friendly).
+relation(fossil_fuels, renewable_resources).
+compare(fossil_fuels, X, Y) :- neg(fossil_fuels, X), neg(Y, X), fossil_fuels != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = fossil_fuels.
+compare(renewable_resources, X, Y) :- neg(renewable_resources, X), neg(Y, X), renewable_resources != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = renewable_resources.
+pos(cheap_air_travel, broaden_travel_possibilities).
+pos(cheap_air_travel, develop_careers).
+pos(cheap_air_travel, broad_knowledge).
+pos(cheap_air_travel, interact_people).
+pos(cheap_air_travel, promote_tourist_industry).
+pos(cheap_air_travel, boost_economy).
+pos(cheap_air_travel, create_jobs).
+neg(cheap_air_travel, increase_air_pollution).
+neg(cheap_air_travel, global_warming).
+relation(cheap_air_travel, people).
+relation(cheap_air_travel, environment).
+cheap_air_travel_is_good_because :- pos(cheap_air_travel, Y).
+compare(cheap_air_travel, X, Y) :- neg(cheap_air_travel, X), neg(Y, X), cheap_air_travel != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cheap_air_travel.
+pos(human_beings, travel_to_outer_space).
+neg(human_beings, waste_money).
+relation(human_beings, outer_space).
+relation(human_beings, facts_about_solar_system).
+relation(human_beings, planet_earth).
+relation(human_beings, atmosphere_of_planet_earth).
+relation(human_beings, global_warming).
+relation(human_beings, sophisticated_technology).
+relation(human_beings, oxygen_tanks).
+relation(human_beings, spaceships).
+relation(human_beings, communication_satellites).
+relation(human_beings, space_pens).
+compare(human_beings, X, Y) :- neg(human_beings, X), neg(Y, X), human_beings != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = human_beings.
+pos(government, promote_alternative_sources_of_energy).
+neg(government, rely_on_water_as_the_major_source_of_energy).
+neg(government, not_encourage_the_use_of_nuclear, solar_or_wind_energy).
+neg(government, not_generate_electricity_from_other_available_sources).
+neg(government, not_reduce_global_warming).
+neg(government, not_motivate_and_encourage_the_people_to_use_alternative_sources_of_energy).
+relation(government, people).
+relation(government, energy).
+relation(government, water).
+relation(government, nuclear_energy).
+relation(government, solar_energy).
+relation(government, wind_energy).
+relation(government, global_warming).
+government_is_good_because :- pos(government, Y).
+compare(government, X, Y) :- neg(government, X), neg(Y, X), government != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = government.
+pos(news_media, entertainment).
+pos(news_media, knowledge).
+relation(news_media, people).
+news_media_is_good_because :- pos(news_media,Y).
+compare(news_media,X,Y) :- neg(news_media,X),neg(Y,X), news_media != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = news_media.
+pos(human, pollute_earth).
+pos(human, exhaust_natural_resources).
+pos(human, endanger_other_species).
+neg(human, protect_earth).
+neg(human, conserve_natural_resources).
+neg(human, save_other_species).
+relation(human, earth).
+human_is_good_because :- neg(human, Y).
+compare(human, X, Y) :- neg(human, X), neg(Y, X), human != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = human.
+pos(human_needs).
+pos(endangered_animals).
+neg(human_needs, endangered_animals).
+relation(human_needs, environment).
+relation(endangered_animals, environment).
+pos(environmental_protection, important).
+pos(economic_developments, important).
+pos(human_future, important).
+pos(human_welfare, important).
+pos(budget, limited).
+pos(recourse, limited).
+pos(governments, must_choose).
+pos(tackling_down_environmental_problems, first_priority).
+pos(economic_developments, not_first_priority).
+pos(earth, only_one).
+pos(civil_constructions, end_up_in_vain).
+pos(economic_achievements, end_up_in_vain).
+pos(all_living_creatures, live_together).
+pos(mother_Earth, need_a_healthy_body).
+pos(all_living_creatures, need_a_strong_planet).
+pos(environmental_problems, urgent).
+pos(economic_issues, not_urgent).
+pos(environmental_problems, global).
+pos(economic_issues, local).
+pos(global_warming, temperature_increases).
+pos(whole_globe, affected).
+pos(hotter_weather, suffer).
+pos(melting_ice_mountain, jeopardizes).
+pos(animals, living_in_the_polar_region).
+pos(rising_sea_level, endangers).
+pos(residents, living_in_the_small_island_near_the_equator).
+pos(rising_sea_water, drown).
+pos(environmental_issues, can_not_be_divided).
+pos(all_humans, simply_entwined).
+pos(economic_issues, global).
+pos(economic_issues, critical).
+pos(economic_issues, can_not_be_put_aside).
+pos(people, revolt_instantly).
+pos(environmental_problems, seem_to_be_more_like_chronic_diseases).
+pos(environmental_problems, would_not_burst_out_right_away).
+pos(global_climate_anomalies).
+pos(environmental_crisis).
+pos(deny_the_truth).
+pos(keep_focusing_on_economic_developments).
+pos(economic_developments, even_the_causes).
+pos(environmental_damages).
+pos(environmental_conservation, more_essential).
+pos(economic_developments).
+pos(urgency).
+pos(ranges_of_influence).
+pos(man, live_happily).
+pos(unhealthy).
+pos(home, devastated).
+pos(ironically, by_ourselves).
+relation(environmental_protection, economic_developments).
+pos(government, spend_money).
+pos(government, basic_needs).
+neg(government, space_exploration).
+relation(government, people).
+relation(government, jobs).
+relation(government, environment).
+relation(government, family).
+pos(cheap_air_travel, broadens_travel_possibilities).
+pos(cheap_air_travel, helps_to_promote_tourist_industry).
+pos(cheap_air_travel, boosts_economy).
+pos(cheap_air_travel, creates_jobs).
+neg(cheap_air_travel, has_negative_impact_on_environment).
+neg(cheap_air_travel, increases_air_pollution).
+neg(cheap_air_travel, contributes_to_global_warming).
+relation(cheap_air_travel, people).
+relation(cheap_air_travel, environment).
+relation(cheap_air_travel, economy).
+cheap_air_travel_is_good_because :- pos(cheap_air_travel, Y).
+compare(cheap_air_travel, X, Y) :- neg(cheap_air_travel, X), neg(Y, X), cheap_air_travel != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = cheap_air_travel.
+pos(environment_protection, is_important).
+neg(art, is_important).
+relation(environment_protection, company).
+environment_protection_is_good_because :- pos(environment_protection,Y).
+compare(environment_protection,X,Y) :- neg(environment_protection,X),neg(Y,X), environment_protection != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = environment_protection.
+relation(environment_protection, human_being).
+compare(environment_protection,X,Y) :- neg(environment_protection,X),neg(Y,X), environment_protection != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = environment_protection.
+relation(environment_protection, company).
+compare(environment_protection,X,Y) :- neg(environment_protection,X),neg(Y,X), environment_protection != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = environment_protection.
+pos(traditional_skills, important).
+pos(traditional_skills, play_important_role).
+pos(traditional_skills, healthcare).
+pos(traditional_skills, environmental_protection).
+pos(traditional_skills, cultural_inherit).
+pos(traditional_skills, complimentary).
+pos(traditional_skills, work_life_balance).
+pos(traditional_skills, environmentally_friendly).
+pos(traditional_skills, reduce_threat_of_climate_change).
+pos(traditional_skills, convey_traditional_culture).
+pos(traditional_skills, values).
+pos(traditional_skills, important_foundation).
+pos(traditional_skills, better_understand_ancient_culture).
+pos(traditional_skills, utilize_them_to_tackle_modern_problems).
+pos(government_authorities, work_closely_together).
+pos(education_institutes, promote_traditional_skills).
+pos(traditional_skills, ways_of_life).
+pos(make_people_to_realize_the_value_of_them).
+pos(protection_of_tradition, important).
+pos(protection_of_tradition, entire_society).
+pos(protection_of_tradition, contributes_to_the_next_generation).
+neg(protecting_traditions, consume_too_much_financial_budget).
+neg(protecting_traditions, incoming_it_takes).
+neg(protecting_traditions, limited_contribution).
+neg(protecting_traditions, government_finance).
+pos(protecting_traditions, potential_value).
+pos(government_authorities, education_institutes).
+pos(promote_traditional_skills).
+pos(traditional_skills, ways_of_life).
+pos(make_people_to_realize_the_value_of_them).
+pos(government, promote_alternative_sources_of_energy).
+neg(government, not_promote_alternative_sources_of_energy).
+pos(alternative_sources_of_energy, abundant).
+pos(alternative_sources_of_energy, eco_friendly).
+neg(water, abundant).
+neg(water, eco_friendly).
+neg(power_cut, not_happen).
+pos(power_cut, happen).
+neg(global_warming, reduce).
+pos(global_warming, increase).
+relation(government, alternative_sources_of_energy).
+relation(government, water).
+relation(government, power_cut).
+relation(government, global_warming).
+government_is_good_because :- pos(government, Y).
+compare(government, X, Y) :- neg(government, X), neg(Y, X), government != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = government.
+neg(nuclear_power, clean).
+neg(nuclear_power, cheap).
+neg(nuclear_power, safe).
+neg(nuclear_power, efficient).
+neg(nuclear_power, economical).
+relation(nuclear_power, atomic_weapons).
+relation(nuclear_power, radiation).
+relation(nuclear_power, waste).
+compare(nuclear_power, X, Y) :- neg(nuclear_power, X), neg(Y, X), nuclear_power != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = nuclear_power.
+pos(government, promote_alternative_sources_of_energy).
+neg(government, rely_on_water_as_the_major_source_of_energy).
+neg(government, not_encourage_the_use_of_nuclear, solar_or_wind_energy).
+neg(government, not_generate_electricity_from_other_available_sources).
+neg(government, not_reduce_global_warming).
+neg(government, not_motivate_and_encourage_the_people_to_use_alternative_sources_of_energy).
+relation(government, people).
+relation(government, energy).
+relation(government, sources).
+relation(government, nuclear_energy).
+relation(government, solar_energy).
+relation(government, wind_energy).
+relation(government, global_warming).
+government_is_good_because :- pos(government, Y).
+compare(government, X, Y) :- neg(government, X), neg(Y, X), government != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = government.
+neg(nuclear_power, clean).
+neg(nuclear_power, cheap).
+neg(nuclear_power, safe).
+pos(nuclear_power, efficient).
+pos(nuclear_power, economical).
+relation(nuclear_power, technology).
+relation(nuclear_power, energy).
+relation(nuclear_power, weapons).
+relation(nuclear_power, accidents).
+relation(nuclear_power, waste).
+nuclear_power_is_good_because :- pos(nuclear_power, efficient), pos(nuclear_power, economical).
+compare(nuclear_power, X, Y) :- neg(nuclear_power, X), neg(Y, X), nuclear_power != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = nuclear_power.
+pos(technology, solve_environmental_problems).
+neg(technology, lead_to_environmental_problems).
+relation(technology, environment).
+compare(technology, X, Y) :- neg(technology, X), neg(Y, X), technology != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = technology.
+relation(X, Y) :- relation(Y, X).
+neg(X, Z) :- relation(X, Y), neg(Y, Z).
+neg(X, Z) :- neg(Y, Z), neg(X, Y).
+pos(X, Z) :- relation(X, Y), pos(Y, Z).
+pos(X, Z) :- pos(Y, Z), pos(X, Y).
+pos(air_pollution, is_bad).
+pos(air_pollution, causes_holes_in_the_ozone).
+pos(air_pollution, affects_global_heating).
+neg(private_individuals, pay_to_clean_up_air_pollution).
+neg(companies, pay_to_clean_up_air_pollution).
+relation(private_individuals, air_pollution).
+relation(companies, air_pollution).
+relation(governments, air_pollution).
+compare(private_individuals, companies, air_pollution) :- neg(private_individuals, pay_to_clean_up_air_pollution), neg(companies, pay_to_clean_up_air_pollution).
+compare(governments, private_individuals, air_pollution) :- relation(governments, air_pollution), neg(private_individuals, pay_to_clean_up_air_pollution).
+compare(governments, companies, air_pollution) :- relation(governments, air_pollution), neg(companies, pay_to_clean_up_air_pollution).
+pos(government, protect_environment).
+pos(corporation, protect_environment).
+pos(citizen, protect_environment).
+neg(government, solve_environment_problems).
+neg(corporation, solve_environment_problems).
+neg(citizen, solve_environment_problems).
+relation(government, corporation).
+relation(government, citizen).
+relation(corporation, citizen).
+pos(toaster, tells_you_when_your_bread_is_crisp).
+pos(alarm_clock, stops_buzzing_at_the_wink_of_an_eye).
+pos(car, informs_you_that_the_lights_are_still_on).
+pos(modern_technology, combined_with_the_wit_and_ingenuity_of_eager_young_employees_and_a_sense_for_what's_important).
+pos(computers, becoming_more_like_their_creators_every_day).
+pos(computers, can_think_like_your_wife).
+pos(computers, can_sound_like_your_mother_in_law).
+pos(computers, can_replace_man's_best_friend_the_dog_as_a_source_of_entertainment).
+neg(computer_junk_mail, emotionally_touching).
+neg(computer_written_letters_from_friends, intimate_hand_written_piece_of_art).
+pos(computers, more_efficient_than_we_are).
+pos(computers, programmed_to_do_the_same_things_as_we_humans_do).
+pos(computers, faster_than_we_are).
+pos(computers, better_than_we_are).
+pos(computers, less_noise_than_we_are).
+neg(people, losing_their_jobs_to_computers).
+pos(computers, able_to_replace_up_to_50_people_at_a_time).
+pos(computers, don't_talk_back).
+pos(computers, don't_take_long_coffee_breaks).
+pos(computers, don't_borrow_office_supplies).
+pos(lonely_office_worker, established_a_humanlike_relationship_to_his_computer).
+pos(computer, has_a_name).
+pos(computer, expensive_extras).
+pos(computer, interesting_when_he_works_overtime).
+pos(computer, deep_green_writing_on_the_screen).
+pos(computer, talks_to_it).
+pos(computer, screams_at_it).
+pos(father_of_two_children, too_tired_to_talk_with_his_young_ones).
+pos(father_of_two_children, busy_playing_Mutant_Turtles_from_outer_space_on_their_Ninetendo_Gameboy_computer).
+pos(saying, to_err_is_human).
+pos(computers, efficient).
+pos(computers, efficiently_stupid).
+pos(employee, keeps_telling_me_the_computer_says_so).
+pos(computer, plain_facts_over_and_over_again).
+pos(machine, angrily_blinking_exact_change_only_phrase).
+pos(machine, out_of_order).
+pos(learning_experiences_with_a_computer).
+pos(contradiction, artificial_intelligence_and_human_incompetence).
+pos(us_Government, spends_billions_of_dollars_annually_for_the_most_advanced_high_tech_computerized_and_up_to_date_missiles).
+pos(computers, can_be_programmed_to_resemble_the_human_being_in_some_ways).
+pos(computers, may_be_able_to_think_on_their_own_someday).
+neg(computers, still_remain_a_box_full_of_wires_and_no_soul).
+neg(computers, a_machine).
+neg(computers, very_human).
+relation(toaster, tells_you_when_your_bread_is_crisp).
+pos(ai, is_changing_the_world).
+pos(ai, is_making_the_world_a_better_place).
+neg(ai, is_making_the_world_a_worse_place).
+relation(ai, future).
+relation(ai, technology).
+relation(ai, change).
+relation(ai, pace).
+relation(ai, velocity).
+relation(ai, direction).
+relation(ai, capabilities).
+relation(ai, predict).
+relation(ai, obliterate).
+relation(ai, field).
+relation(ai, artist).
+relation(ai, programmer).
+relation(ai, wisdom).
+relation(ai, life_decision).
+relation(ai, career).
+relation(ai, blackbox).
+relation(ai, context).
+relation(ai, society).
+ai_is_good_because :- pos(ai,Y).
+compare(ai,X,Y) :- neg(ai,X),neg(Y,X), ai != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = ai.
+pos(travel_agent, human_connection).
+neg(ai, human_connection).
+relation(travel_agent, customer).
+relation(ai, customer).
+relation(travel_agent, trip_planning).
+relation(ai, trip_planning).
+travel_agent_is_good_because :- pos(travel_agent, Y).
+ai_is_good_because :- pos(ai, Y).
+compare(travel_agent, X, Y) :- neg(travel_agent, X), neg(Y, X), travel_agent != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = travel_agent.
+compare(ai, X, Y) :- neg(ai, X), neg(Y, X), ai != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = ai.
+pos(ai, can_accomplish_intellectual_tasks).
+neg(ai, can_understand).
+neg(ai, can_grasp_first_principles).
+neg(ai, can_integrate_everything).
+relation(ai, world).
+relation(ai, human).
+ai_is_good_because :- pos(ai, Y).
+compare(ai, X, Y) :- neg(ai, X), neg(Y, X), ai != Y.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = ai.
+pos(technology, makes_information_available).
+pos(information, is_necessary_for_education).
+neg(technology, makes_education_unnecessary).
+relation(technology, education).
+technology_is_good_because :- pos(technology,Y).
+compare(technology,X,Y) :- neg(technology,X),neg(Y,X), technology != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = technology.

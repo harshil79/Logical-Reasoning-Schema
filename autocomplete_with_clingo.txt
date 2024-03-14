@@ -1,0 +1,28 @@
+Extract information from the following clingo output that will help me write an argumentative text.
+Clingo output:
+????????????????????
+
+Explanation 1 – negative and positive:
+n(dogs, need_a_lot_of_time) represents a negative relationship between dogs and need_a_lot_of_time, it means that dogs need lots of time and it is a negative thing and dogs can be disliked for that reason.
+p(cats, need_less_time) represents a positive relationship between cats and need_less_time, it means that cats dont need much time to be spen with them and thats a positive thing and cats can be liked for that reason.
+
+Explanation 2 – relation between two entities:
+r(dogs, cats) represents a relationship between dogs and cats.
+
+Explanation 3 – Encoding:
+The relations listed as below represent the reasons why an entity X is positive(Liked) or negative(disliked). The feature or aspect or a property because the entity X is good (liked) or bad (disliked) is represented by Y.
+Example:
+elon_is_good_because :- p(elon,Y)
+elon_is_bad_because :- n(elon,Y)
+If user asks support or good or positive features, use the knowledge of p(elon, Y) & if user asks counter claims, or bad or negative features use the knowledge of n(elon, Y).
+
+Help me to continue my writing with the use of the clingo output above and abide by the following rules:
+- Do not include any information that was not passed as clingo output.
+- Refer only to the information given in the clingo output.
+- You will receive a text in the form: "Text…". You will then give me 3 suggestions for continuing the text based on the information received as clingo output.
+- You will give me 3 suggestions to me in the format Positive:[Option1, Option2, Option3] if asked for proof or reasons why the entity is positive or good and is liked and Negative:[Option1, Option2, Option3] if asked for proof or reasons why the entity a bad or negative and is disliked.
+- Each option should be a complete sentence with a maximum length of 15 words.
+- The input you receive will always be in the format "Text…" and your output will always be in the format Positive:[Option1, Option2, Option3] OR Negative:[Option1, Option2, Option3].
+
+Please give me 3 suggestions depending on the given clingo output, the rules above and the following text:
+"!!!!!!!!!!!!!!!!!!!!"

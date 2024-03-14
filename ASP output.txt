@@ -1,0 +1,125 @@
+ Section 1 - Negative and positive relationships:
+
+pos(cats, loyalty).
+pos(cats, helpfulness).
+pos(dogs, hunting_abilities).
+pos(dogs, tackling_abilities).
+neg(dogs, rabidness).
+neg(dogs, meanness).
+neg(dogs, hunger).
+
+Section 2 - General relationships:
+
+relation(cats, loyalty).
+relation(cats, helpfulness).
+relation(dogs, hunting_abilities).
+relation(dogs, tackling_abilities).
+relation(dogs, rabidness).
+relation(dogs, meanness).
+relation(dogs, hunger).
+
+Section 3 - Encoding:
+
+cats_are_loyal :- pos(cats, loyalty).
+cats_are_helpful :- pos(cats, helpfulness).
+dogs_can_hunt :- pos(dogs, hunting_abilities).
+dogs_can_tackle :- pos(dogs, tackling_abilities).
+dogs_are_rabid :- pos(dogs, rabidness).
+dogs_are_mean :- pos(dogs, meanness).
+dogs_are_hungry :- pos(dogs, hunger).
+compare(cats, dogs, loyalty) :- pos(cats, loyalty), neg(dogs, loyalty).
+compare(cats, dogs, helpfulness) :- pos(cats, helpfulness), neg(dogs, helpfulness).
+compare(cats, dogs, hunting_abilities) :- pos(cats, hunting_abilities), neg(dogs, hunting_abilities).
+compare(cats, dogs, tackling_abilities) :- pos(cats, tackling_abilities), neg(dogs, tackling_abilities).
+compare(cats, dogs, rabidness) :- pos(cats, rabidness), neg(dogs, rabidness).
+compare(cats, dogs, meanness) :- pos(cats, meanness), neg(dogs, meanness).
+compare(cats, dogs, hunger) :- pos(cats, hunger), neg(dogs, hunger).
+ Section 1 - Negative and positive relationships:
+
+pos(dog, loyalty).
+pos(dog, trainable).
+pos(dog, versatility).
+neg(cat, loyalty).
+neg(cat, trainable).
+neg(cat, versatility).
+
+Section 2 - General relationships:
+
+relation(dog, loyalty).
+relation(dog, trainable).
+relation(dog, versatility).
+relation(cat, loyalty).
+relation(cat, trainable).
+relation(cat, versatility).
+
+Section 3 - Encoding:
+
+loyalty_is_good :- pos(X, loyalty).
+loyalty_is_bad :- neg(X, loyalty).
+trainable_is_good :- pos(X, trainable).
+trainable_is_bad :- neg(X, trainable).
+versatility_is_good :- pos(X, versatility).
+versatility_is_bad :- neg(X, versatility).
+compare(dog,X,Y) :- neg(dog,X),neg(Y,X), dog != Y.
+compare(X,Y,Z) :- neg(X,Y),neg(X,Z), Y != Z, Y = dog.
+ Section 1 - Negative and positive relationships:
+
+pos(dogs, good_friends).
+neg(dogs, good_friends).
+pos(cats, not_very_strong).
+pos(cats, not_lethal).
+neg(cats, not_very_strong).
+neg(cats, not_lethal).
+pos(dogs, attacking_people).
+neg(cats, attacking_people).
+
+Section 2 - General relationships:
+
+relation(dogs, good_friends).
+relation(dogs, training).
+relation(dogs, breed).
+relation(dogs, characteristics).
+relation(cats, not_very_strong).
+relation(cats, not_lethal).
+relation(cats, attacking_people).
+relation(dogs, attacking_people).
+
+Section 3 - Encoding:
+
+dogs_are_good_friends :- pos(dogs, good_friends).
+dogs_are_not_good_friends :- neg(dogs, good_friends).
+cats_are_not_very_strong :- pos(cats, not_very_strong).
+cats_are_not_lethal :- pos(cats, not_lethal).
+dogs_attack_people :- pos(dogs, attacking_people).
+cats_attack_people :- pos(cats, attacking_people).
+compare(dogs, cats, X) :- neg(dogs, X), neg(cats, X), dogs != cats.
+compare(X, Y, Z) :- neg(X, Y), neg(X, Z), Y != Z, Y = dogs.
+ Section 1 - Negative and positive relationships:
+
+pos(dogs, cute).
+neg(dogs, dumb).
+pos(cats, independent).
+neg(dogs, independent).
+pos(dogs, follow_orders).
+neg(education_system, independent).
+pos(education_system, follow_orders).
+neg(dogs, high_maintenance).
+pos(dogs, destroy_house).
+neg(dogs, walk_in_rain).
+pos(dogs, do_business_in_house).
+neg(dogs, restrained).
+
+Section 2 - General relationships:
+
+relation(dogs, cats).
+relation(dogs, education_system).
+relation(cats, education_system).
+relation(dogs, owners).
+relation(dogs, neighbourhood).
+relation(dogs, house).
+
+Section 3 - Encoding:
+
+dogs_are_better_than_cats :- pos(dogs, X), neg(cats, X).
+cats_are_better_than_dogs :- pos(cats, X), neg(dogs, X).
+compare(dogs, cats, X) :- neg(dogs, X), neg(cats, X), dogs != cats.

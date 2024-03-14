@@ -1,0 +1,29 @@
+ Section 1 - Negative and positive relationships:
+
+pos(dogs, cute).
+neg(dogs, dumb).
+pos(cats, independent).
+neg(dogs, independent).
+pos(dogs, follow_orders).
+neg(education_system, independent).
+pos(education_system, follow_orders).
+neg(dogs, high_maintenance).
+pos(dogs, destroy_house).
+neg(dogs, walk_in_rain).
+pos(dogs, do_business_in_house).
+neg(dogs, restrained).
+
+Section 2 - General relationships:
+
+relation(dogs, cats).
+relation(dogs, education_system).
+relation(cats, education_system).
+relation(dogs, owners).
+relation(dogs, neighbourhood).
+relation(dogs, house).
+
+Section 3 - Encoding:
+
+dogs_are_better_than_cats :- pos(dogs, X), neg(cats, X).
+cats_are_better_than_dogs :- pos(cats, X), neg(dogs, X).
+compare(dogs, cats, X) :- neg(dogs, X), neg(cats, X), dogs != cats.
