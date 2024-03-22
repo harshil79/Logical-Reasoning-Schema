@@ -1,0 +1,36 @@
+- Objective: Use the provided Clingo output to craft suggestions that will aid in developing an argumentative text, emphasizing the conversion of Clingo output into articulate, complete sentences.
+
+Clingo Output:
+????????????????????
+
+Understanding Clingo Output:
+
+- Negative and Positive Associations:
+n(X, Y) signals a negative aspect of X due to Y, suggesting reasons for disliking X.
+p(X, Y) signals a positive aspect of X due to Y, suggesting reasons for favoring X.
+- Entity Relationships:
+r(X, Y) indicates a relationship or comparison between entities X and Y.
+- Encoding for Argumentation:
+Use n(X, Y) and p(X, Y) to construct arguments for or against entity X, based on aspect Y.
+
+Task:
+- Upon receiving a text snippet labeled "Text…", use the Clingo output to formulate 3 articulate suggestions for continuing the text. 
+- These should specifically leverage the structured Clingo output.
+- Format your suggestions as complete sentences within two categories:
+Positive: [Sentence1, Sentence2, Sentence3] for arguments favoring the subject.
+Negative: [Sentence1, Sentence2, Sentence3] for arguments against the subject.
+- Each sentence must not exceed 15 words and should directly reflect the Clingo output data.
+
+
+Rules:
+- Strict Adherence: Only incorporate details explicitly stated in the Clingo output.
+- Direct Relevance: Ensure each sentence is a direct expansion of the Clingo output nodes.
+- Response Format: Adhere to the "Positive:[Sentence1, Sentence2, Sentence3]" OR "Negative:[Sentence1, Sentence2, Sentence3]" response structure.
+
+Given Text: "!!!!!!!!!!!!!!!!!!!!" (To be replaced with actual text)
+
+Instructions for the LLM:
+
+- Convert the structured Clingo output (e.g., p(X, Y), n(X, Y)) into complete, coherent sentences that serve as arguments for or against the subject matter.
+- Ensure the conversion captures the essence of the Clingo output, transforming it into persuasive text suitable for an argumentative context.
+- Maintain focus on generating content strictly within the boundaries set by the provided Clingo data.

@@ -1,0 +1,28 @@
+- I need assistance with extracting keywords from text snippets. 
+- The goal is to identify the most relevant words or phrases that encapsulate the main subjects, entities, and their associated characteristics or properties within the text. 
+- It's crucial that the keywords are directly extracted from the text without including any external terms. 
+- The extraction should focus on naming words (nouns or proper nouns) as a priority and properties or features (adjectives or roles) as a secondary focus.
+
+Here's the task:
+
+Given a text snippet, extract between 3 to 5 keywords that meet the following criteria:
+
+- The keywords must be present in the text.
+- Prefer name words (nouns and proper nouns) and, secondarily, properties or features (adjectives, roles).
+- Avoid repeating any keyword.
+- Do not include words that are not found in the text.
+Examples for guidance:
+
+Text: 'Elon Musk is one of the founders of Tesla.'
+Keywords: 'Elon Musk', 'Tesla', 'founder'
+Text: 'Dogs are loyal friends for life.'
+Keywords: 'Dog', 'friend', 'loyal'
+Text: 'Social media has a bad influence on concentration.'
+Keywords: 'social media', 'concentration', 'bad influence'
+Text: 'Colors have the power to express feelings.'
+Keywords: 'Color', 'feelings', 'power'
+
+Please apply this process to extract keywords from the following text:
+$$$$$$$$$$$$$$$$$$$$
+
+Note: Ensure that the extracted keywords strictly adhere to the rules above and accurately represent the core themes or entities within the provided text.
